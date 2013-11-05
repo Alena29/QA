@@ -1,0 +1,15 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 60C6-AECA
+
+ Directory of C:\Users\Alena\QA\HW_16
+
+11/04/2013  09:28 PM    <DIR>          .
+11/04/2013  09:28 PM    <DIR>          ..
+11/04/2013  09:32 PM                 0 list.txt
+11/04/2013  09:31 PM             1,230 script_16_01.rb
+11/04/2013  09:31 PM             1,225 script_16_02.rb
+               3 File(s)          2,455 bytes
+
+     Total Files Listed:
+               3 File(s)          2,455 bytes
+               2 Dir(s)  271,846,457,344 bytes free
