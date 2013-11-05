@@ -1,7 +1,7 @@
 #==================================================================================================
-# Script               = script_14_01.rb
+# Script               = script_15_01.rb
 #==================================================================================================
-# Description          = Retrieving Mac address from your computer; Argument(1): ipv4_address
+# Description          = Retrieving Subnet Mask from your computer; Argument(1): subnet_mask
 # Name                 = "Alena Furman"
 # Email                = "alena.furman29@gmail.com"
 #===================================================================================================
@@ -16,12 +16,8 @@ end
 re = ARGV[0]
 
 # Conditional statement if-else assigning appropriate regex to the argument
-if re == 'mac_address' then 
-re = /\b([0-9a-fA-F]{2}(-|:)){5}[0-9a-fA-F]{2}\b/
-elsif re == 'ipv4_address' then
+if re == 'subnet_mask' then 
 re = /\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/
-elsif re == 'ipv6_address' then
-re = /[\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*::([\dA-Fa-f]{1,4}(:[\dA-Fa-f]{1,4})*)?%\d{2}/
 else
 re = /\w+/
 end
@@ -29,6 +25,6 @@ end
 # reading 'ipconfig' output from the text file
 file = File.read('ip.txt')
 # matching text with the regex
-match = file.match re
-puts "match result: #{match}"
+match = file.scan(re)
+puts "Subnet mask: #{match[1]}"
 
